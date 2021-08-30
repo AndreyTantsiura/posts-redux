@@ -17,7 +17,7 @@ const FormAddPost = () => {
 
   const dispatch = useDispatch();
 
-  const handleClick = (e) => {
+  const handlerClick = (e) => {
     e.preventDefault();
     dispatch(action);
   };
@@ -42,9 +42,9 @@ const FormAddPost = () => {
           setselectAuthor(e.target.value);
         }}
       >
-        <option id="4">Leia Organa</option>
-        <option id="5">Darth Vader</option>
-        <option id="6">Owen Lars</option>
+        <option>Leia Organa</option>
+        <option>Darth Vader</option>
+        <option>Owen Lars</option>
       </Select>
       <Label>Text:</Label>
       <Textarea
@@ -62,7 +62,7 @@ const FormAddPost = () => {
           setInputLink(e.target.value);
         }}
       />
-      <Button onClick={handleClick}>Add</Button>
+      <Button onClick={handlerClick}>Add</Button>
     </Wrapper>
   );
 };

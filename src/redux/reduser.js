@@ -10,6 +10,7 @@ const LUKE_IMAGE =
   "https://media.nauticamilanonline.com/product/busto-luke-skywalker-star-wars-episode-viii-18cm-800x800.jpg";
 const RISE_SKYWALKER =
   "https://media.tenor.com/images/ef05556fe6351303a924db6a05e5a4f4/tenor.png";
+const UNKNOW = "https://static.thenounproject.com/png/770826-200.png";
 
 const initialState = {
   posts: [
@@ -28,8 +29,6 @@ const initialState = {
   ],
 };
 
-
-
 export default function reducer(state = initialState, action) {
   switch (action.type) {
     case "addNewPost": {
@@ -37,7 +36,7 @@ export default function reducer(state = initialState, action) {
         ...state,
         posts: [
           {
-            photo: "",
+            photo: UNKNOW,
             name: action.payload.selectAuthor,
             image: action.payload.inputLink,
             content: action.payload.inputText,
