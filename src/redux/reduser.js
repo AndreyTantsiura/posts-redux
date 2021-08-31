@@ -1,6 +1,3 @@
-import DART_IMAGE from "../img/4.png";
-import LEILA_IMAGE from "../img/5.png";
-import OWEN_IMAGE from "../img/6.png";
 
 const ANAKIN_IMAGE =
   "https://upload.wikimedia.org/wikipedia/en/thumb/7/74/Anakin-Jedi.jpg/220px-Anakin-Jedi.jpg";
@@ -36,7 +33,7 @@ export default function reducer(state = initialState, action) {
         ...state,
         posts: [
           {
-            photo: UNKNOW,
+            photo: action.payload.currentFoto,
             name: action.payload.selectAuthor,
             image: action.payload.inputLink,
             content: action.payload.inputText,
