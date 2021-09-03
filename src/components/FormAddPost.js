@@ -23,6 +23,9 @@ const FormAddPost = () => {
   const handleClick = (e) => {
     e.preventDefault();
     dispatch(action);
+    setselectAuthor("");
+    setyInputText("");
+    setInputLink("");
   };
 
   let currentFoto = "";
